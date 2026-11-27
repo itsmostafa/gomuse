@@ -293,7 +293,6 @@ use [uPlot](https://github.com/leeoniya/uPlot).
 
 ## License
 
-This repository does not currently include a project license. Until one is
-added, copyright law reserves all rights to the project authors. A license is
-required before others can legally use, modify, or redistribute the code as
-open source.
+Licensed under the [Apache License 2.0](LICENSE).
+
+The bundled uPlot library retains its [MIT license](internal/server/web/vendor/uPlot.LICENSE).
