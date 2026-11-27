@@ -235,7 +235,9 @@ func (s *Server) ListenAndServe(ctx context.Context) error {
 	sctx, cancel := context.WithTimeout(context.Background(), shutdownTimeout)
 	defer cancel()
 	err := hs.Shutdown(sctx)
-	<-errc
+	if serveErr := <-errc; err == nil && !errors.Is(serveErr, http.ErrServerClosed) {
+		return serveErr
+	}
 	return err
 }
 
