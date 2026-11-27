@@ -340,7 +340,10 @@ func TestRunWithRealClock(t *testing.T) {
 		t.Fatal("no chunk arrived within 2s")
 	}
 	select {
-	case <-done:
+	case err := <-done:
+		if err != context.DeadlineExceeded {
+			t.Fatalf("Run returned %v, want context.DeadlineExceeded", err)
+		}
 	case <-time.After(2 * time.Second):
 		t.Fatal("Run did not return after the deadline")
 	}

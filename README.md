@@ -23,7 +23,7 @@ environment, Lab Streaming Layer, or external web assets required.
 ## Requirements
 
 - macOS with Bluetooth enabled
-- [Go 1.24](https://go.dev/dl/) or newer
+- [Go 1.27.4](https://go.dev/dl/) or newer
 - A modern web browser
 - A Muse headband, unless you use demo mode
 - Optional: [Task](https://taskfile.dev/installation/) for the provided
@@ -293,7 +293,6 @@ use [uPlot](https://github.com/leeoniya/uPlot).
 
 ## License
 
-This repository does not currently include a project license. Until one is
-added, copyright law reserves all rights to the project authors. A license is
-required before others can legally use, modify, or redistribute the code as
-open source.
+Licensed under the [Apache License 2.0](LICENSE).
+
+The bundled uPlot library retains its [MIT license](internal/server/web/vendor/uPlot.LICENSE).

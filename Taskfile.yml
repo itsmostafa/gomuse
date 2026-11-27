@@ -43,7 +43,7 @@ tasks:
     desc: Run golangci-lint
     preconditions:
       - sh: command -v golangci-lint
-        msg: "golangci-lint not installed — go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest"
+        msg: "golangci-lint not installed — see https://golangci-lint.run/docs/welcome/install/local/"
     cmds:
       - golangci-lint run ./...
 
